@@ -11,7 +11,7 @@ public class NumeroSecreto {
       Random random = new Random();
 //agora vou adicionar as variaveis necessárias para o jogo FORA do meu laço
       int NumeroSecreto = random.nextInt(1, 11); // número de 1 a 10
-      int Palpite= -1;//essa var representa o numero que o usuario vai chutar
+      int Palpite= 0;//essa var representa o numero que o usuario vai chutar
       int tentativas = 0;//atribui o valor zero para o numero de tentativas que vai ser exposto depois
 //agora com as variaveis já decididas vou criar o meu Do
       do {
