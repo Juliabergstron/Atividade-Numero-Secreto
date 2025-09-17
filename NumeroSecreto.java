@@ -11,11 +11,13 @@ public class NumeroSecreto {
       Random random = new Random();
 //agora vou adicionar as variaveis necessárias para o jogo FORA do meu laço
       int NumeroSecreto = random.nextInt(1, 11); // número de 1 a 10
-      int Palpite;//essa var representa o numero que o usuario vai chutar
+      int Palpite= -1;//essa var representa o numero que o usuario vai chutar
       int tentativas = 0;//atribui o valor zero para o numero de tentativas que vai ser exposto depois
 //agora com as variaveis já decididas vou criar o meu Do
       do {
-            System.out.print("Digite um número entre 1 e 10: ");//aqui o usuario tera que digitar um numero
+           try{
+            System.out.print("Digite um número entre 1 e 10: ");
+            //aqui o usuario tera que digitar um numero
             Palpite = scanner.nextInt();//o scanner vai ler o numero colocado pelo usuario 
             tentativas++;// aqui falei para se somar um ao valor da tentativa que tinha valor zero.
          
@@ -40,7 +42,9 @@ public class NumeroSecreto {
        System.out.println("Você tentou " + tentativas + " vezes.");
      //se for maior aparece vezes
       }}}
-   
+          catch (Exception e) { 
+          System.out.println("Digite apenas números.");
+          scanner.next();}}
       while (Palpite!= NumeroSecreto);
       scanner.close();  
    }
